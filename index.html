@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07101e"><title>Six New Details — Smooth Motion Lab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+<header class="topbar"><div class="brand"><span>◉</span> MOTION / INTERFACE</div><div class="meta">PART 5 · 6 NEW DETAILS</div></header>
+<section class="hero"><div class="eyebrow">MICRO-INTERACTIONS / SLOW MOTION</div><h1>More smooth details,<br><em>in slow-mo.</em></h1><p>Six tiny motion choices that make interface feedback feel polished, clear and intentional.</p></section>
+<nav class="tabs">
+<button class="tab active" data-id="copy"><b>01</b><span>Copy button</span></button>
+<button class="tab" data-id="field"><b>02</b><span>Text field</span></button>
+<button class="tab" data-id="steps"><b>03</b><span>Checkout steps</span></button>
+<button class="tab" data-id="map"><b>04</b><span>Map pin</span></button>
+<button class="tab" data-id="delete"><b>05</b><span>Delete</span></button>
+<button class="tab" data-id="photo"><b>06</b><span>Photo viewer</span></button>
+</nav>
+<section class="lesson">
+<div class="lesson-head"><div><div class="eyebrow" id="kicker">01 · COPY BUTTON</div><h2 id="title">Morph, don't <em>swap.</em></h2><p id="description">A copy action smoothly morphs into its success state instead of abruptly replacing the button.</p></div><span class="slow">SLOW-MO ×½</span></div>
+<div class="demo" id="demo">
+<section class="example example-copy active" data-example="copy">
+<div class="share-card"><b>Share link</b><div class="copy-row"><span>motion.ui/p/5</span><button id="copyBtn"><span class="copy-glyph">▢</span><strong>Copy</strong></button></div></div>
+<div class="chart"><small>BUTTON WIDTH</small><svg viewBox="0 0 500 170" preserveAspectRatio="none"><path class="baseline" d="M0 70 H500"/><path class="curve" d="M0 145 C42 145 44 34 112 45 S175 70 245 70 H500"/><circle cx="500" cy="70" r="5"/></svg><small class="time">TIME · 800 ms</small></div>
+<div class="callout">ICON MORPHS · WIDENS 36 px</div>
+</section>
+<section class="example example-field" data-example="field">
+<div class="form-card"><b>Sign in</b><label class="floating"><span>Email address</span><input id="email" type="email" placeholder="Email address" autocomplete="off" value="sam@studio.io"></label><label class="password"><input type="password" placeholder="Password"></label></div>
+<div class="chart"><small>LABEL SIZE</small><svg viewBox="0 0 500 170" preserveAspectRatio="none"><path class="baseline" d="M0 145 H500"/><path class="curve" d="M0 25 C55 25 50 130 150 145 S260 145 500 145"/><circle cx="500" cy="145" r="5"/></svg><small class="time">TIME · 800 ms</small></div>
+<div class="callout">LABEL 20 → 14 px · LINE FROM CENTRE</div>
+</section>
+<section class="example example-steps" data-example="steps">
+<div class="checkout-card"><div class="step-track"><div class="track-bg"></div><div class="track-fill" id="trackFill"></div><button class="step done" data-step="0"><i>✓</i><b>Cart</b></button><button class="step done" data-step="1"><i>✓</i><b>Shipping</b></button><button class="step" data-step="2"><i>3</i><b>Payment</b></button></div><button class="continue" id="continue">Continue</button><span class="speed">1×</span></div>
+<div class="chart"><small>LINE FILL</small><svg viewBox="0 0 500 170" preserveAspectRatio="none"><path class="baseline" d="M0 145 H500"/><path class="curve" d="M0 145 H130 C220 145 225 145 270 90 S325 25 500 25"/><circle cx="500" cy="25" r="5"/></svg><small class="time">TIME · 667 ms</small></div>
+<div class="callout">LINE FILLS IN 400 ms</div>
+</section>
+<section class="example example-map" data-example="map">
+<div class="map-card"><div class="roads"></div><div class="pin-shadow"></div><button class="map-pin" id="mapPin" aria-label="Drop map pin"><span></span></button><div class="pickup" id="pickup">Pickup here</div><button class="drop-pin" id="dropPin">Drop pin</button></div>
+<div class="chart"><small>PIN HEIGHT</small><svg viewBox="0 0 500 170" preserveAspectRatio="none"><path class="baseline" d="M0 145 H500"/><path class="curve bounce" d="M0 15 L90 145 Q155 60 225 112 T350 137 T500 145"/><circle cx="500" cy="145" r="5"/></svg><small class="time">TIME · 1000 ms</small></div>
+<div class="callout">LANDS IN 200 ms · 2 BOUNCES</div>
+</section>
+<section class="example example-delete" data-example="delete">
+<div class="files-card"><div class="file-list" id="fileList">
+<div class="file-row"><i class="file-icon red"></i><b>Q3 report.pdf</b><button aria-label="Delete Q3 report">×</button></div>
+<div class="file-row selected"><i class="file-icon blue"></i><b>Old draft.docx</b><button aria-label="Delete old draft">×</button></div>
+<div class="file-row"><i class="file-icon slate"></i><b>Notes.txt</b><button aria-label="Delete notes">×</button></div>
+<div class="file-row"><i class="file-icon yellow"></i><b>Budget.xlsx</b><button aria-label="Delete budget">×</button></div>
+</div><div class="trash" id="trash">▤</div><button class="undo" id="undo">Undo</button></div>
+<div class="chart"><small>LIST MOVES UP</small><svg viewBox="0 0 500 170" preserveAspectRatio="none"><path class="baseline" d="M0 70 H500"/><path class="curve" d="M0 145 H145 C180 145 190 15 260 35 S320 70 500 70"/><circle cx="500" cy="70" r="5"/></svg><small class="time">TIME · 1000 ms</small></div>
+<div class="callout">FLIES 400 ms · GAP CLOSES</div>
+</section>
+<section class="example example-photo" data-example="photo">
+<div class="photo-viewer" id="photoViewer"><div class="thumbs"><button class="thumb t1"></button><button class="thumb t2"></button><button class="thumb t3"></button><button class="thumb t4"></button><button class="thumb t5"></button><button class="thumb t6"></button></div><button class="hero-photo" id="heroPhoto"><span class="sun"></span><span class="mountain m1"></span><span class="mountain m2"></span><span class="focus-ring"></span></button><button class="return-grid" id="returnGrid">×</button></div>
+<div class="chart"><small>PHOTO SCALE</small><svg viewBox="0 0 500 170" preserveAspectRatio="none"><path class="baseline" d="M0 70 H500"/><path class="curve" d="M0 25 C80 25 85 65 160 65 S200 145 300 145 H500"/><circle cx="500" cy="145" r="5"/></svg><small class="time">TIME · 1000 ms</small></div>
+<div class="callout">FOLLOWS 1:1 · SPRINGS HOME</div>
+</section>
+</div>
+<div class="lesson-foot"><span id="hint">Click Copy to see the button morph into its success state.</span><button class="replay" id="replay">↻ Replay animation</button></div>
+</section>
+<section class="summary"><div class="eyebrow">SIX DETAILS · ONE BETTER FEEL</div><h2>Motion carries<br><em>meaning.</em></h2><p>Preserve context · keep labels visible · draw progress · add physical feedback · close gaps · return to origin.</p></section>
+<footer><span>PART 5 · SIX NEW DETAILS</span><span>HTML · CSS · JAVASCRIPT</span></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
